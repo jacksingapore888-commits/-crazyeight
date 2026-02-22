@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  @apply bg-[#1a472a] text-white overflow-hidden;
+  background-image: radial-gradient(circle at center, #2d5a3f 0%, #1a472a 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.felt-texture {
+  position: relative;
+}
+
+.felt-texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  opacity: 0.1;
+  pointer-events: none;
+}
